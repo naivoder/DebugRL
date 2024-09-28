@@ -5,7 +5,7 @@ import numpy as np
 class OneActionZeroObsEnv(gym.Env):
     def __init__(self):
         super(OneActionZeroObsEnv, self).__init__()
-        self.action_space = gym.gym.spaces.Discrete(1)  # Only one action
+        self.action_space = gym.spaces.Discrete(1)  # Only one action
         self.observation_space = gym.spaces.Box(
             low=0, high=0, shape=(1,), dtype=np.float32
         )
